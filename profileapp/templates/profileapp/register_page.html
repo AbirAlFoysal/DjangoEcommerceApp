@@ -1,0 +1,51 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+{% if messages %}
+<div class="alert-success">
+    <center>
+        {% for message in messages %}
+        <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+        {% endfor %}
+</center>
+</div>
+
+{% endif %}
+
+<br><br>
+
+  <div class="card"  style="max-width: 60%; margin: auto;">
+
+    <div class="card-header">
+      <center><h2>Register New Account</h2></center>
+    </div>
+    <div class="card-body">
+          <form action="" method="POST">
+            {% csrf_token %}
+                  <label for="username">Username:</label>
+                  {{form.username.errors}}
+                  {{form.username}}
+                  <br><br>
+                <label for="">Email:</label>
+                {{form.email.errors}}
+                {{form.email}}
+                <br><br>
+                <label for="">Password:</label>
+                {{form.password1.errors}}
+                {{form.password1}}
+                <br><br>
+                <label for="">Confirm Password:</label>
+                {{form.password2.errors}}
+                {{form.password2}}
+                <br><br><br><br>
+          <button class="btn btn-primary">Sign up</button>
+          <center><p class="login-link">Have an account?? <a href="{% url 'login' %}">Log in</a></p></center>
+      </div>
+    </div>
+  </div>  </main>
+
+
+{% endblock %}

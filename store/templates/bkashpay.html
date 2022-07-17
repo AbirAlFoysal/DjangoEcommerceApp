@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<center>
+    <center><h2><b>1. How to pay via bkash: </b></h2></center>
+<img class="card-img" style="width:65vw; height: 75vh ;" src="{% static 'image/bm.jpg' %}" alt=""> 
+</center>
+
+<div class="card">
+    <div class="card-header">
+        <center><h2>Payment Address</h2></center> 
+    </div>
+    <div class="card-body">
+        <form action="#">
+            <label for=""> <b> Address: </b></label>
+            <input type="text" style="width:50% ;" placeholder="Delivery Address">
+            <button class="btn btn-success">Proceed</button>
+            <p class="alert alert-success"><b>Item would be delivered within 5 working days!</b></p>
+        </form>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<div class="card">
+    <div class="card-header">
+<center><h2>Product Detail</h2></center>
+    </div>
+    <div class="card-body">
+        <div class="row">
+        <div class = 'col-md'>
+            <div class="card shadow rounded" style="width: 18rem; margin: auto;">
+                <img src="{{product.image.url}}" class="card-img-top" alt="...">
+              </div>
+          </div>
+          <div class = 'col-md'>
+
+            <p></p><b>Product Name: </b>{{product.name}}</p>
+            <p></p><b>Price: </b>{{product.price}} Tk</p>
+            <p></p><b>Description: </b>{{product.detail}}</p>
+            <a  class="btn btn-outline-primary addtocart" data-action = "add" data-product = "{{product.id}}">Add to Cart</a>
+
+        </div>
+          </div>
+
+    </div>
+</div>
+
+{% endblock content %}

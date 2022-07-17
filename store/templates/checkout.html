@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="card">
+    <div class="card-header">
+<center><h2>Select Payment Method:</h2></center>
+    </div>
+    <div class="card-body">
+<div class="row rounded">
+    <div class="col-md img-thumbnail shadow"  style="margin:30px ;" >
+        <h2>1. </h2><a href="{% url 'cod' %}"><img src="{% static 'image/cod.png' %}" alt=""></a>
+    </div>
+    <div class="col-md  img-thumbnail shadow"  style="margin:30px ;">
+        <h2>2. </h2><a href="{% url 'bpay' %}"><img src="{% static 'image/bkash.png' %}" alt=""></a>
+    </div>
+</div>
+    </div>
+</div>
+
+
+<center><h2><b>Total Amount: {{cart.get_cart_total|floatformat:2}} Tk.</b></h2></center>
+{% endblock content %}
