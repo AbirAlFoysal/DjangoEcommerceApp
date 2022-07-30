@@ -40,6 +40,14 @@
                 <label for="">Confirm Password:</label>
                 {{form.password2.errors}}
                 {{form.password2}}
+                <br><br>
+                <label for=""> First Name:</label>
+                {{form.first_name.errors}}
+                {{form.first_name}}                
+                <br><br>
+                <label for="">Last Name:</label>
+                {{form.last_name.errors}}
+                {{form.last_name}}
                 <br><br><br><br>
           <button class="btn btn-primary">Sign up</button>
           <center><p class="login-link">Have an account?? <a href="{% url 'login' %}">Log in</a></p></center>
